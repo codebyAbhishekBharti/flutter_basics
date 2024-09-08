@@ -284,7 +284,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ),
       //   ],
       // ),
-      body: ListView.separated(
+      body: ListView.builder(
         itemBuilder: (context,index){
           return Padding(
             padding: const EdgeInsets.all(8.0),
@@ -298,13 +298,7 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         itemCount: arrName.length,
-        // itemExtent: 100,
-        separatorBuilder: (context,index){
-          return const Divider(
-            color: Colors.black,
-            thickness: 2,
-          );
-        },
+        itemExtent: 100,
         // scrollDirection: Axis.horizontal,
       )
     );
