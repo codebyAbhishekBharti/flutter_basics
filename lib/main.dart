@@ -19,25 +19,28 @@ class FlutterApp extends StatelessWidget{
 class DashBoardScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    var arrNames = ['Amit', 'Sumit', 'Rahul', 'Rohit', 'Sachin'];
     return Scaffold(
       appBar: AppBar(
         title: Text('DashBoard'),
         backgroundColor: Colors.blue,
       ),
-      // body: const Padding(
-      //   // padding: const EdgeInsets.all(8.0),
-      //   padding: EdgeInsets.only(top: 11,left:111),
-      //   child: Text("Jai Shree Ram",style: TextStyle(fontSize: 25),),
-      // )
-      body: Container(
-        color: Colors.blueGrey,
-        margin: EdgeInsets.all(20),
-        child: const Center(
-          child: Padding(
-            padding: EdgeInsets.all(11),
-            child: Text("Jai Shree Ram",style: TextStyle(fontSize: 25,color: Colors.white),),
-          ),
-        ),
+      body: ListView.separated(
+        itemBuilder: (context, index){
+          return ListTile(
+            // leading: Text('${index+1}'),
+            leading: CircleAvatar(
+              child: Image.asset('assets/images/abhishek.jpg'),
+            ),
+            title: Text(arrNames[index]),
+            subtitle: Text('This is Subtitle'),
+            trailing: Icon(Icons.arrow_forward_ios),
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const Divider(height: 1,thickness: 1,);
+        },
+        itemCount: arrNames.length,
       )
     );
   }
