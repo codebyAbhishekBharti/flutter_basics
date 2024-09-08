@@ -43,6 +43,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrName = ['Abhishek','Madhu','Sita','Geeta','Sunita'];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Container'),
@@ -166,96 +167,145 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ),
       // )
       // scrollView Widget
-      body:Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.lime,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.lightGreen,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.blueAccent,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.teal,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.lightGreen,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.blueAccent,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.red,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.orange,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.lightGreen,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.blueAccent,
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                // width: 200,
-                color: Colors.red,
-              ),
-            ],
-          ),
-        ),
+      // body:Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: [
+      //         Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: SingleChildScrollView(
+      //             scrollDirection: Axis.horizontal,
+      //             child: Row(
+      //               children: [
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.lime,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.lightGreen,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.blueAccent,
+      //                 ),
+      //                 Container(
+      //                   margin: EdgeInsets.only(right: 11),
+      //                   height: 200,
+      //                   width: 200,
+      //                   color: Colors.red,
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.teal,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.lightGreen,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.blueAccent,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.red,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.orange,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.lightGreen,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.blueAccent,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 11),
+      //           height: 200,
+      //           // width: 200,
+      //           color: Colors.red,
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // )
+      // body: ListView(
+      //   scrollDirection: Axis.horizontal,
+      //   reverse: true,
+      //   children: const [
+      //     Padding(
+      //       padding: EdgeInsets.all(8.0),
+      //       child: Text('one',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+      //     ),
+      //     Padding(
+      //       padding: EdgeInsets.all(8.0),
+      //       child: Text('two',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+      //     ),
+      //     Padding(
+      //       padding: EdgeInsets.all(8.0),
+      //       child: Text('three',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+      //     ),
+      //     Padding(
+      //       padding: EdgeInsets.all(8.0),
+      //       child: Text('four',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+      //     ),
+      //     Padding(
+      //       padding: EdgeInsets.all(8.0),
+      //       child: Text('five',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+      //     ),
+      //   ],
+      // ),
+      body: ListView.separated(
+        itemBuilder: (context,index){
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+                height: 100,
+                color: Colors.lime,
+                child: Text(arrName[index],
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),
+                )
+            ),
+          );
+        },
+        itemCount: arrName.length,
+        // itemExtent: 100,
+        separatorBuilder: (context,index){
+          return const Divider(
+            color: Colors.black,
+            thickness: 2,
+          );
+        },
+        // scrollDirection: Axis.horizontal,
       )
     );
   }
