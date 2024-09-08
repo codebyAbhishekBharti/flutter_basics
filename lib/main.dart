@@ -137,31 +137,89 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ),
       // ),
       // InkWell Widget
-      body: Center(
-        child: InkWell(
-          onTap: (){
-            print("Tap on Container");
-          },
-          onLongPress: (){
-            print("LongTap on Container");
-          },
-          onDoubleTap: (){
-            print("DoubleTap on Container");
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.amber,
-            child: InkWell(
-              onTap: (){
-                print("Tap on text");
-              },
-              child: Center(
-                  child: Text('Click Here',
-                      style: TextStyle(fontSize: 25,fontWeight:FontWeight.w800)
-                  )
+      // body: Center(
+      //   child: InkWell(
+      //     onTap: (){
+      //       print("Tap on Container");
+      //     },
+      //     onLongPress: (){
+      //       print("LongTap on Container");
+      //     },
+      //     onDoubleTap: (){
+      //       print("DoubleTap on Container");
+      //     },
+      //     child: Container(
+      //       width: 200,
+      //       height: 200,
+      //       color: Colors.amber,
+      //       child: InkWell(
+      //         onTap: (){
+      //           print("Tap on text");
+      //         },
+      //         child: Center(
+      //             child: Text('Click Here',
+      //                 style: TextStyle(fontSize: 25,fontWeight:FontWeight.w800)
+      //             )
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // )
+      // scrollView Widget
+      body:Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.orange,
               ),
-            ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.lightGreen,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.blueAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.red,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.orange,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.lightGreen,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.blueAccent,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 200,
+                // width: 200,
+                color: Colors.red,
+              ),
+            ],
           ),
         ),
       )
