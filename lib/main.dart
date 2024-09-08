@@ -171,11 +171,45 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.lime,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.lightGreen,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.blueAccent,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.red,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Container(
                 margin: EdgeInsets.only(bottom: 11),
                 height: 200,
                 // width: 200,
-                color: Colors.orange,
+                color: Colors.teal,
               ),
               Container(
                 margin: EdgeInsets.only(bottom: 11),
