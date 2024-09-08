@@ -96,46 +96,75 @@ class _MyHomePageState extends State<MyHomePage> {
       //         child: Image.asset('assets/images/papa.jpg')
       //     )
       // ),
-      body: Container(
-        // height: 300,
-        // width: 300,
-        color: Colors.pink,
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Text('C1', style: TextStyle(fontSize: 20),),
-                    Text('C2', style: TextStyle(fontSize: 20),),
-                    Text('C3', style: TextStyle(fontSize: 20),),
-                    Text('C4', style: TextStyle(fontSize: 20),),
-                    Text('C5', style: TextStyle(fontSize: 20),)
-                  ],
-                ),
-                Text('R1', style: TextStyle(fontSize: 20),),
-                Text('R2', style: TextStyle(fontSize: 20),),
-                Text('R3', style: TextStyle(fontSize: 20),),
-                Text('R4', style: TextStyle(fontSize: 20),),
-                Text('R5', style: TextStyle(fontSize: 20),),
-              ],
+      // body: Container(
+      //   // height: 300,
+      //   // width: 300,
+      //   color: Colors.pink,
+      //   child: Column(
+      //     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //     crossAxisAlignment: CrossAxisAlignment.end,
+      //     // mainAxisAlignment: MainAxisAlignment.start,
+      //     // crossAxisAlignment: CrossAxisAlignment.center,
+      //     children: <Widget>[
+      //       const Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //         children: [
+      //           Column(
+      //             children: [
+      //               Text('C1', style: TextStyle(fontSize: 20),),
+      //               Text('C2', style: TextStyle(fontSize: 20),),
+      //               Text('C3', style: TextStyle(fontSize: 20),),
+      //               Text('C4', style: TextStyle(fontSize: 20),),
+      //               Text('C5', style: TextStyle(fontSize: 20),)
+      //             ],
+      //           ),
+      //           Text('R1', style: TextStyle(fontSize: 20),),
+      //           Text('R2', style: TextStyle(fontSize: 20),),
+      //           Text('R3', style: TextStyle(fontSize: 20),),
+      //           Text('R4', style: TextStyle(fontSize: 20),),
+      //           Text('R5', style: TextStyle(fontSize: 20),),
+      //         ],
+      //       ),
+      //       const Text('A', style: TextStyle(fontSize: 20),),
+      //       const Text('B', style: TextStyle(fontSize: 20),),
+      //       const Text('C', style: TextStyle(fontSize: 20),),
+      //       const Text('D', style: TextStyle(fontSize: 20),),
+      //       const Text('E', style: TextStyle(fontSize: 20),),
+      //       ElevatedButton(child:const Text("Click me Bro"),onPressed: (){print("Button is pressed");},)
+      //     ],
+      //   ),
+      // ),
+      // InkWell Widget
+      body: Center(
+        child: InkWell(
+          onTap: (){
+            print("Tap on Container");
+          },
+          onLongPress: (){
+            print("LongTap on Container");
+          },
+          onDoubleTap: (){
+            print("DoubleTap on Container");
+          },
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.amber,
+            child: InkWell(
+              onTap: (){
+                print("Tap on text");
+              },
+              child: Center(
+                  child: Text('Click Here',
+                      style: TextStyle(fontSize: 25,fontWeight:FontWeight.w800)
+                  )
+              ),
             ),
-            const Text('A', style: TextStyle(fontSize: 20),),
-            const Text('B', style: TextStyle(fontSize: 20),),
-            const Text('C', style: TextStyle(fontSize: 20),),
-            const Text('D', style: TextStyle(fontSize: 20),),
-            const Text('E', style: TextStyle(fontSize: 20),),
-            ElevatedButton(child:const Text("Click me Bro"),onPressed: (){print("Button is pressed");},)
-          ],
+          ),
         ),
-      ),
+      )
     );
   }
 }
