@@ -24,31 +24,14 @@ class DashBoardScreen extends StatelessWidget{
         title: Text('DashBoard'),
         backgroundColor: Colors.blue,
       ),
-      // body: Center(
-      //   child: Container(
-      //     width: 100,
-      //     height: 100,
-      //     child: CircleAvatar(
-      //       backgroundImage: AssetImage('assets/images/papa.jpg'),
-      //     ),
-      //   ),
-      // )
-        body: Center(
-          child: CircleAvatar(
-              // backgroundImage: AssetImage('assets/images/papa.jpg'),
-              child: Column(
-                children: [
-                  Container(
-                    width: 100,
-                    margin: EdgeInsets.only(top: 10),
-                    child:Image.asset("assets/images/abhishek.jpg"),
-                  ),
-                  const Text('Amit'),
-                ],
-              ),
-              radius: 100,
-            ),
-        )
+      body: Center(
+        child: Text("Jai Shree Ram",
+            style: TextStyle(
+              fontFamily: 'FontMain',
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),),
+      ),
     );
   }
 
