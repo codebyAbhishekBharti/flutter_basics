@@ -31,27 +31,100 @@ class FlutterApp extends StatelessWidget{
 }
 
 class DashBoardScreen extends StatelessWidget{
+  var emailText = TextEditingController();
+  var password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DashBoard'),
+        title: Text('Jai Shree Ram'),
         backgroundColor: Colors.orange,
       ),
-      body:  Column(
-        children: [
-          Text("Jai Shree Ram",
-            style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.redAccent),),
-          Text("Jai Shree Ram",
-            style: Theme.of(context).textTheme.displayMedium,),
-          Text("Jai Shree Ram",
-            style: Theme.of(context).textTheme.displayLarge,),
-          Text("Jai Shree Ram",
-            style: mTextStyle11(),
+      body: Center(
+        child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                // enabled: false,
+                  controller: emailText,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    // suffixText: 'Suffix',
+                    hintText: 'Enter Email',
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: (){
+                        print('Search Icon Clicked');
+                      },
+                    ),
+                    prefixIcon: Icon(Icons.email, color: Colors.red,),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 5,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 2,
+                      ),
+                    ),
+                    disabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        color: Colors.green,
+                        width: 2,
+                      ),
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 2,
+                      ),
+                    ),
+
+                  ),
+              ),
+              Container(height: 11,),
+              TextField(
+                controller: password,
+                obscureText: true,
+                obscuringCharacter: '*',
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  hintText: 'Enter Password',
+                  prefixIcon: Icon(Icons.lock, color: Colors.red,),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      color: Colors.red,
+                      width: 2,
+                    ),
+                  ),
+
+                ),
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    print('Email: ${emailText.text}');
+                    print('Password: ${password.text}');
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Login', style: TextStyle(fontSize: 20,color: Colors.red),),
+                  )
+              ),
+            ],
           ),
-        ]
-      ),
-    );
+        ),
+      )
+      );
   }
 
 }
