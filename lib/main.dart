@@ -37,8 +37,28 @@ class DashBoardScreen extends StatefulWidget {
 }
 
 class _DashBoardScreenState extends State<DashBoardScreen> {
-  var time = DateTime.now();
-  var flag_time=true;
+  var arrColor = [
+    Colors.amber,
+    Colors.blue,
+    Colors.green,
+    Colors.red,
+    Colors.purple,
+    Colors.orange,
+    Colors.pink,
+    Colors.teal,
+    Colors.yellow,
+    Colors.brown,
+    Colors.cyan,
+    Colors.indigo,
+    Colors.lime,
+    Colors.grey,
+    Colors.deepOrange,
+    Colors.deepPurple,
+    Colors.lightBlue,
+    Colors.lightGreen,
+    Colors.blueGrey,
+    Colors.teal,
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,57 +68,26 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
       ),
       body: Center(
         child: Container(
-          width: 200,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          width: 250,
+          margin: EdgeInsets.all(10),
+          child: GridView.count(
+            crossAxisCount: 3,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
             children: [
-              Text(
-                '${time.hour}:${time.minute}:${time.second}',
-                style: const TextStyle(
-                  fontSize: 30,
-                  color: Colors.red,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  // for(int i=0; i<10; i++) {
-                  // //   print(i);
-                  // //   await Future.delayed(Duration(seconds: 1));
-                  //   print("sleep 1 sec");
-                  // }
-                  for(int i=0;i<100;i++){
-                    if(flag_time==false){
-                      break;
-                    }
-                    print(flag_time);
-                    print(i);
-                    setState(() {
-                      time = DateTime.now();
-                    });
-                    await Future.delayed(Duration(seconds: 1));
-                  };
-                  // setState(() {
-                  //   time = DateTime.now();
-                  // });
-                },
-                child: Text("Current Time"),
-              ),
-              ElevatedButton(
-                  onPressed: (){
-                    setState(() {
-                      flag_time = false;
-                    });
-                    print("Stop time flag ${flag_time}");
-                    print("Stopping time");
-                  }
-                  ,
-                  child: Text('Stop Time')
-              )
+              Container(color: arrColor[0]),
+              Container(color: arrColor[1]),
+              Container(color: arrColor[2]),
+              Container(color: arrColor[3]),
+              Container(color: arrColor[4]),
+              Container(color: arrColor[5]),
+              Container(color: arrColor[6]),
+              Container(color: arrColor[7]),
+              Container(color: arrColor[8]),
             ],
           ),
         ),
-      ),
+      )
     );
   }
 }
